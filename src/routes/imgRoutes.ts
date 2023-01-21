@@ -1,9 +1,7 @@
 import express from 'express';
 import imgController from '../controller/imgController';
-const imgRouter = express.Router()
+const imgRouter = express.Router();
 
-console.log()
+imgRouter.get('/', imgController);
 
-imgRouter.get('/',imgController )
-
-export default imgRouter
+export default imgRouter;

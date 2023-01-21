@@ -8,7 +8,7 @@ const app = (0, express_1.default)();
 const imgRoutes_1 = __importDefault(require("./routes/imgRoutes"));
 // routes
 app.get('/api', (req, res) => {
-    res.send('Hello');
+    return res.send('Hello');
 });
 app.use('/api/images', imgRoutes_1.default);
 const port = 3000;

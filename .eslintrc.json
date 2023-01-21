@@ -1,9 +1,10 @@
 {
     "env": {
-        "browser": true,
         "es2021": true
     },
-    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+    "extends": ["eslint:recommended", 
+    "plugin:@typescript-eslint/recommended", 
+    "plugin:@typescript-eslint/eslint-recommended"],
     "overrides": [],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -13,7 +14,7 @@
     "plugins": ["@typescript-eslint"],
     "rules": {
         "linebreak-style": [0, "windows"],
-        "quotes": [1, "single"],
+        "quotes": [0, "single"],
         "semi": [0, "always"]
     }
 }

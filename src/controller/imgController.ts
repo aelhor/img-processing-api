@@ -32,7 +32,7 @@ const imgController = async (req: Request, res: Response): Promise<Response> => 
             //   image not found in thumbs folder
             const resized = resizeImage(img, width as unknown as number, height as unknown as number);
             const imageResizedBuffer = await resized.toBuffer();
-            
+
             // add the resized img to thumbs directory
             try {
                 await fs.writeFile(thumbsPath, imageResizedBuffer);

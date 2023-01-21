@@ -36,7 +36,7 @@ describe('img controller', () => {
 
     it('should return a 400 error if the width and height values are not valid', async () => {
         // Send a GET request to the imgController API without providing the filename
-        const response = await request.get('/api/images').query({filename:'2', width: 'w', height: 'h' });
+        const response = await request.get('/api/images').query({ filename: '2', width: 'w', height: 'h' });
 
         // Check that the response status is 400
         expect(response.status).toBe(400);
@@ -44,8 +44,6 @@ describe('img controller', () => {
         // Check that the response body contains an error message
         expect(response.body.message).toBe('Invalid parameters. filename, width, and height should be strings and valid numbers');
     });
-
-
 
     it('should return a 500 error if the file can not be read ', async () => {
         // Send a GET request to the imgController API without providing the filename

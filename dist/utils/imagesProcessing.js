@@ -16,7 +16,7 @@ const resizeImage = (img, width, height) => {
     }
     const imageResized = (0, sharp_1.default)(img).resize({
         width: +width,
-        height: +height
+        height: +height,
     });
     return imageResized;
 };
